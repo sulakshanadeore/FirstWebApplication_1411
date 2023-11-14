@@ -36,12 +36,13 @@
             </asp:DropDownList>
             <br />
             <br />
-            <asp:Calendar ID="Calendar1" runat="server" DayNameFormat="Full" FirstDayOfWeek="Monday" NextMonthText="Next" OnSelectionChanged="Calendar1_SelectionChanged" PrevMonthText="Prev" TitleFormat="Month">
+            <asp:Calendar ID="Calendar1" runat="server" DayNameFormat="Full" FirstDayOfWeek="Monday" NextMonthText="Next" OnSelectionChanged="Calendar1_SelectionChanged" PrevMonthText="Prev">
                 <WeekendDayStyle BackColor="White" BorderColor="Red" BorderStyle="Double" BorderWidth="2px" Font-Bold="True" ForeColor="#33CC33" />
             </asp:Calendar>
             <br />
             <br />
             <asp:TextBox ID="txtdate" runat="server"></asp:TextBox>
+            <asp:Button ID="btnsubmit" runat="server" OnClick="btnsubmit_Click" Text="Submit" />
             <br />
             <br />
             <br />

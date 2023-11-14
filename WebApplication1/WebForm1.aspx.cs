@@ -60,5 +60,10 @@ namespace WebApplication1
         {
             txtdate.Text = Calendar1.SelectedDate.ToLongDateString();
         }
+
+        protected void btnsubmit_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/WebForm2.aspx");
+        }
     }
 }
