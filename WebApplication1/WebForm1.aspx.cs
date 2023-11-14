@@ -14,6 +14,10 @@ namespace WebApplication1
             if (!Page.IsPostBack)//not going to the server for the next time/second time/ ie I am visiting first time
             {
                 Response.Write("Loading complete...... Welcome .... U have come here first time.....");
+                Response.Write("<br/>");
+                Response.Write("You selected " + DropDownList1.SelectedItem.Text);
+                Response.Write("<br/>");
+                Response.Write("You selected " + DropDownList1.SelectedItem.Value);
             }
             else
             {
@@ -30,6 +34,31 @@ namespace WebApplication1
         //    txtans.Text = (Convert.ToInt32(txtfno.Text) + Convert.ToInt32(txtsno.Text)).ToString();
              
 
+        }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            int ans = Convert.ToInt32(txtfno.Text) / Convert.ToInt32(txtsno.Text);
+            txtans.Text = ans.ToString();
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            int ans = Convert.ToInt32(txtfno.Text) * Convert.ToInt32(txtsno.Text);
+            txtans.Text = ans.ToString();
+        }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Response.Write("You selected " + DropDownList1.SelectedValue); 
+            //Response.Write("You selected " + DropDownList1.Text);
+            Response.Write("You selected " + DropDownList1.SelectedItem.Text);
+            Response.Write("You selected " + DropDownList1.SelectedItem.Value);
+        }
+
+        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+        {
+            txtdate.Text = Calendar1.SelectedDate.ToLongDateString();
         }
     }
 }

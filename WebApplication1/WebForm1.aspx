@@ -19,8 +19,35 @@
             
             <br />
             <asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" Text="Add" />
+            <asp:ImageButton ID="ImageButton1" runat="server" Height="33px" ImageUrl="~/avatar1.png" OnClick="ImageButton1_Click" Width="93px" />
+            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Multiply</asp:LinkButton>
+            <br />
             <br />
             <asp:TextBox ID="txtans" runat="server"></asp:TextBox>
+            
+            <br />
+            <br />
+            <br />
+            Select Value:
+            <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+                <asp:ListItem Selected="True" Value="10">HR</asp:ListItem>
+                <asp:ListItem Value="20">Training</asp:ListItem>
+                <asp:ListItem Value="30">Accounts</asp:ListItem>
+            </asp:DropDownList>
+            <br />
+            <br />
+            <asp:Calendar ID="Calendar1" runat="server" DayNameFormat="Full" FirstDayOfWeek="Monday" NextMonthText="Next" OnSelectionChanged="Calendar1_SelectionChanged" PrevMonthText="Prev" TitleFormat="Month">
+                <WeekendDayStyle BackColor="White" BorderColor="Red" BorderStyle="Double" BorderWidth="2px" Font-Bold="True" ForeColor="#33CC33" />
+            </asp:Calendar>
+            <br />
+            <br />
+            <asp:TextBox ID="txtdate" runat="server"></asp:TextBox>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             
         </div>
     </form>
